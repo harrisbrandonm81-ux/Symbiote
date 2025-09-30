@@ -52,4 +52,29 @@
     <a href="game49.html">Game 49</a>
     <a href="game50.html">Game 50</a>
   </div>
+</div><div style="padding: 1em;">
+  <h2>Games</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1em;">
+    <button data-src="games/game1.html">Game 1</button>
+    <button data-src="games/game2.html">Game 2</button>
+    <button data-src="games/game3.html">Game 3</button>
+    <!-- Repeat up to Game 50 -->
+    <button data-src="games/game50.html">Game 50</button>
+  </div>
+
+  <div id="game-frame" style="margin-top: 2em;">
+    <p>Select a game to play.</p>
+  </div>
 </div>
+
+<script>
+  document.querySelectorAll('button[data-src]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const src = btn.getAttribute('data-src');
+      document.getElementById('game-frame').innerHTML = `
+        <iframe src="${src}" width="100%" height="500px" style="border:none;"></iframe>
+      `;
+    });
+  });
+</script>
+
