@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <input type="text" id="search" placeholder="Search games..." />
+  </header>
+
+  <nav class="categories">
+    <button data-category="action">Action</button>
+    <button data-category="puzzle">Puzzle</button>
+    <button data-category="racing">Racing</button>
+    <button data-category="strategy">Strategy</button>
+    <button data-category="arcade">Arcade</button>
+  </nav>
+
+  <main class="game-grid" id="gameGrid">
+    <!-- Game tiles injected by JS -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
