@@ -1,0 +1,129 @@
+/* --- Global Styles & Background --- */
+
+body {
+    /* The very dark background color */
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+/* Background pattern effect (The streaky look) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Creating the streaked effect with a linear gradient (approximation) */
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 0, 150, 0.1), /* Pink/Magenta */
+        rgba(255, 0, 150, 0.1) 5px,
+        rgba(0, 255, 255, 0.1) 5px, /* Cyan */
+        rgba(0, 255, 255, 0.1) 10px
+    );
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* --- Main Layout Container (Flexbox for two columns) --- */
+
+.main-screen-container {
+    display: flex;
+    gap: 80px; /* Space between the tiles and the text */
+    padding: 40px;
+    max-width: 1200px;
+}
+
+/* --- Left Column (Buttons) --- */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between the two tiles */
+}
+
+.tile {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border-radius: 20px;
+    padding: 25px 35px;
+    width: 200px;
+    text-align: center;
+    color: #ccc; 
+    cursor: pointer;
+}
+
+.tile .title {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.tile .description {
+    font-size: 0.9em;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+/* Custom Styling for Icons */
+
+/* Mario Mushroom Placeholder (to mimic the image) */
+.mushroom-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: radial-gradient(circle at 50% 50%, white 30%, red 30%);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* Settings Icon (Font Awesome) */
+.settings-tile i {
+    color: #55aaff; /* A light blue/cyan color for the gear */
+    margin-top: 10px;
+    font-size: 5em; /* Large icon size */
+}
+
+
+/* --- Right Column (Welcome Message) --- */
+
+.welcome-content {
+    /* Font used in the image appears to be a large serif font */
+    font-family: serif; 
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.3;
+    color: white;
+    /* Reset margins for flow */
+    margin: 0;
+}
+
+.welcome-content p {
+    margin: 0.5em 0;
+}
+
+.welcome-content .status-line {
+    /* Styling to make the status text stand out */
+    color: #ffd700; /* Gold/Yellow color for the status text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .main-screen-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    .welcome-content {
+        font-size: 1.8em;
+    }
+}
