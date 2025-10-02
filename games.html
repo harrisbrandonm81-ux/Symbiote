@@ -3,82 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSG Game Grid</title>
-    <link rel="stylesheet" href="games.css">
+    <title>RSG Games List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="game-grid-container">
+    <div class="list-container">
         
-        <header class="game-header-grid">
-            <input type="text" placeholder="Search for ur sussy games here" class="search-input-grid">
+        <header class="game-header">
+            <input type="text" placeholder="Search for ur sussy games here" class="search-input">
+            <div class="sort-options">
+                <button class="sort-btn alphabetical">Alphabetical</button>
+                <button class="sort-btn random">Random Game</button>
+            </div>
         </header>
 
-        <div class="game-grid">
-            
-            <div class="game-card">
-                <img src="images/clash-of-tanks.jpg" alt="Clash of Tanks Thumbnail" class="game-thumbnail">
-                <p class="game-title">Clash of Tanks</p>
-            </div>
-            <div class="game-card">
-                <img src="images/clash-of-skulls.jpg" alt="Clash Of Skulls Thumbnail" class="game-thumbnail">
-                <p class="game-title">Clash Of Skulls</p>
-            </div>
-            <div class="game-card">
-                <img src="images/paw-clicker.jpg" alt="Paw Clicker Thumbnail" class="game-thumbnail">
-                <p class="game-title">Paw Clicker</p>
-            </div>
-            <div class="game-card">
-                <img src="images/color-tunnel.jpg" alt="Color Tunnel Thumbnail" class="game-thumbnail">
-                <p class="game-title">Color Tunnel</p>
-            </div>
-            <div class="game-card">
-                <img src="images/hill-climber.jpg" alt="Hill Climber Thumbnail" class="game-thumbnail">
-                <p class="game-title">Hill Climber</p>
-            </div>
-
-            <div class="game-card">
-                <img src="images/call-of-tanks.jpg" alt="Call of Tanks Thumbnail" class="game-thumbnail">
-                <p class="game-title">Call of Tanks</p>
-            </div>
-            <div class="game-card">
-                <img src="images/geometry-vibes.jpg" alt="Geometry Vibes Thumbnail" class="game-thumbnail">
-                <p class="game-title">Geometry Vibes</p>
-            </div>
-            <div class="game-card">
-                <img src="images/pirate-defense.jpg" alt="Pirate Defense Thumbnail" class="game-thumbnail">
-                <p class="game-title">Pirate Defense</p>
-            </div>
-            <div class="game-card">
-                <img src="images/mafia-wars.jpg" alt="Mafia Wars Thumbnail" class="game-thumbnail">
-                <p class="game-title">Mafia Wars</p>
-            </div>
-            <div class="game-card">
-                <img src="images/ninja-obbi.jpg" alt="Ninja Obby Parkour Thumbnail" class="game-thumbnail">
-                <p class="game-title">Ninja Obby Parkour</p>
-            </div>
-
-            <div class="game-card">
-                <img src="images/elastic-man.jpg" alt="Elastic Man Thumbnail" class="game-thumbnail">
-                <p class="game-title">Elastic Man</p>
-            </div>
-            <div class="game-card">
-                <img src="images/snow-rush.jpg" alt="Snow Rush 3D Thumbnail" class="game-thumbnail">
-                <p class="game-title">Snow Rush 3D</p>
-            </div>
-            <div class="game-card">
-                <img src="images/clash-of-armour.jpg" alt="Clash Of Armour Thumbnail" class="game-thumbnail">
-                <p class="game-title">Clash Of Armour</p>
-            </div>
-            <div class="game-card">
-                <img src="images/italian-brainrot.jpg" alt="Italian Brainrot Survive Parkour Thumbnail" class="game-thumbnail">
-                <p class="game-title">Italian Brainrot Survive Parkour</p>
-            </div>
-            <div class="game-card">
-                <img src="images/brainrot-clicker.jpg" alt="Brainrot Clicker Thumbnail" class="game-thumbnail">
-                <p class="game-title">Brainrot Clicker</p>
-            </div>
-
-        </div>
+        <ul class="game-list">
+            <li class="game-item">2048 <i class="far fa-star"></i></li>
+            <li class="game-item">Game Request / Feedback <i class="far fa-star"></i></li>
+            <li class="game-item">Soccer Random <i class="far fa-star"></i></li>
+            <li class="game-item">Draw Hill <i class="far fa-star"></i></li>
+            <li class="game-item">Crazy Cars <i class="far fa-star"></i></li>
+            <li class="game-item">Volleyball Random <i class="far fa-star"></i></li>
+            <li class="game-item">Tetris <i class="far fa-star"></i></li>
+            </ul>
     </div>
 </body>
 </html>
