@@ -1,53 +1,140 @@
+/* --- Global Styles & Background --- */
+
 body {
-  font-family: sans-serif;
-  margin: 0;
-  background: #111;
-  color: #fff;
+    /* The very dark background color */
+    background-color: #1a1a1a;
+    color: white;
+    font-family: serif; /* Using a serif font to mimic the look */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent background pattern from causing scrollbars */
 }
 
-header {
-  padding: 10px;
-  text-align: center;
-  background: #222;
+/* Optional: Background pattern effect (a rough approximation) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Creating the streaked effect with a linear gradient. You'd likely use a background image for a perfect match. */
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 0, 150, 0.1), /* Pink/Magenta */
+        rgba(255, 0, 150, 0.1) 5px,
+        rgba(0, 255, 255, 0.1) 5px, /* Cyan */
+        rgba(0, 255, 255, 0.1) 10px
+    );
+    opacity: 0.5; /* Make the pattern subtle */
+    z-index: -1; /* Keep it behind the content */
 }
 
-#search {
-  width: 60%;
-  padding: 8px;
-  font-size: 16px;
+/* --- Container for the main layout --- */
+
+.container {
+    display: flex;
+    gap: 80px; /* Space between the buttons and the text */
+    padding: 40px;
+    /* Adjust width/max-width as needed for your screen size */
+    max-width: 1200px; 
 }
 
-.categories {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  background: #333;
+/* --- Left Column (Buttons) --- */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between the two tiles */
 }
 
-.categories button {
-  background: #444;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
+.tile {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for the tiles */
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 200px; /* Fixed width for a square/vertical look */
+    text-align: center;
+    color: #ccc; /* Lighter text for the description */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.tile:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.game-tile {
-  background: #222;
-  border-radius: 8px;
-  text-align: center;
-  padding: 10px;
+.tile .title {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.game-tile img {
-  width: 100%;
-  border-radius: 6px;
+.tile .description {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Styling for the Icons */
+
+/* Mario Mushroom Placeholder */
+.mushroom-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    /* This mimics the look without using the actual image */
+    background: radial-gradient(circle at 50% 50%, white 30%, red 30%);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* Settings Icon (Font Awesome) */
+.settings-tile i {
+    color: #55aaff; /* A light blue/cyan color for the gear */
+    margin-top: 10px;
+}
+
+
+/* --- Right Column (Welcome Message) --- */
+
+.main-content {
+    flex-grow: 1; /* Allows the text box to take up the remaining space */
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.3;
+    color: white; /* Default text color */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Slight shadow for readability */
+}
+
+/* Specific styling for the status message in the image */
+.main-content .status {
+    color: #ffd700; /* Gold/Yellow color for the status text */
+    margin: 0.5em 0;
+}
+
+/* Specific styling for the "Happy Gaming" part */
+.main-content .greeting {
+    margin-top: 1em;
+}
+
+/* Optional: Make the text responsive on smaller screens */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .sidebar {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main-content {
+        font-size: 1.5em;
+        text-align: center;
+    }
 }
