@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #111;
+  color: #fff;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  background: #222;
+}
+
+#search {
+  width: 60%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: #333;
+}
+
+.categories button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-tile {
+  background: #222;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+}
+
+.game-tile img {
+  width: 100%;
+  border-radius: 6px;
+}
