@@ -1,0 +1,28 @@
+body {
+    /* The very dark base background color (Dark Gray/Black) */
+    background-color: #1a1a1a; 
+    color: white;
+    /* ... (other layout properties like margin, height) ... */
+}
+
+/* Background pattern effect (The streaky look) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Creates the repeating pink and cyan lines */
+    background-image: repeating-linear-gradient(
+        -45deg,
+        /* Pink/Magenta Streak */
+        rgba(255, 0, 150, 0.1), 
+        rgba(255, 0, 150, 0.1) 5px,
+        /* Cyan/Blue Streak */
+        rgba(0, 255, 255, 0.1) 5px, 
+        rgba(0, 255, 255, 0.1) 10px
+    );
+    opacity: 0.5; /* Makes the streaks subtle */
+    z-index: -1;
+}
