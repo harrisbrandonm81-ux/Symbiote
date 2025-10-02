@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GameHub</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSG Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <header>
-    <input type="text" id="search" placeholder="Search games..." />
-  </header>
+    <div class="container">
+        <div class="sidebar">
+            
+            <div class="tile game-tile">
+                <div class="icon-placeholder mushroom-icon"></div>
+                <div class="title">Games</div>
+                <div class="description">WSG GUysers. Yahoo! hheheheheh</div>
+            </div>
 
-  <nav class="categories">
-    <button data-category="action">Action</button>
-    <button data-category="puzzle">Puzzle</button>
-    <button data-category="racing">Racing</button>
-    <button data-category="strategy">Strategy</button>
-    <button data-category="arcade">Arcade</button>
-  </nav>
+            <div class="tile settings-tile">
+                <i class="fas fa-cog fa-5x"></i>
+                <div class="title">Settings</div>
+                <div class="description">Use this section to maximize ur sussy gaming ig</div>
+            </div>
 
-  <main class="game-grid" id="gameGrid">
-    <!-- Game tiles injected by JS -->
-  </main>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="main-content">
+            <p>Welcome to RSG!</p>
+            <p class="status">[UNDERGOING REPAIRS, THANK YOU FOR BEING PATIENT]</p>
+            <p>Please do not play these games during class. Ever.</p>
+            <p class="greeting">Happy Gaming! :)</p>
+        </div>
+    </div>
 </body>
 </html>
