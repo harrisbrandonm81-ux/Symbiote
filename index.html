@@ -1,37 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symbiote</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="Symbiote" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symbiote Proxy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    input[type="text"] {
+      width: 60%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #fff;
+      outline: none;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #00cccc;
+    }
+    .nav {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav a {
+      color: #ff00ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="main-screen-container">
-        
-        <div class="sidebar">
-            
-            <div class="tile game-tile">
-                <div class="icon-placeholder mushroom-icon"></div>
-                <div class="title">Games</div>
-                <div class="description">Bet. This section will let you play games. Yahoo! hheheheheh</div>
-            </div>
+  <h1>Symbiote Proxy</h1>
+  <input type="text" id="urlInput" placeholder="Enter a site to infect..." />
+  <button onclick="launch()">Launch</button>
 
-            <div class="tile settings-tile">
-                <i class="fas fa-cog fa-5x"></i>
-                <div class="title">Settings</div>
-                <div class="description">Use this section to maximize ur sussy gaming ig</div>
-            </div>
+  <div class="nav">
+    <a href="/games">Games</a>
+    <a href="/tools">Tools</a>
+    <a href="/settings">Settings</a>
+    <a href="/about">About</a>
+  </div>
 
-        </div>
-
-        <div class="welcome-content">
-            <p class="greeting-line">Welcome to RSG!</p>
-            <p class="status-line">[UNDERGOING REPAIRS, THANK YOU FOR BEING PATIENT]</p>
-            <p class="instruction-line">Please do not play these games during class. Ever.</p>
-            <p class="greeting-line">Happy Gaming! :)</p>
-        </div>
-    </div>
+  <script>
+    function launch() {
+      const input = document.getElementById('urlInput').value.trim();
+      if (input) {
+        window.location.href = `/symbiote/${encodeURIComponent(input)}`;
+      }
+    }
+  </script>
 </body>
 </html>
